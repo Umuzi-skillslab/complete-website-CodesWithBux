@@ -1,0 +1,748 @@
+
+
+/* ============================================================
+   1. RESET — removes browser default margin and padding
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ============================================================
+   2. BASE STYLES — applies to the whole page
+   ============================================================ */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--bs-font-sans-serif);
+  background-color: #f7f4ef;
+  color: #0e0d0b;
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Headings use the decorative serif font */
+h1, h2, h3, h4 {
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.15;
+  color: #0e0d0b;
+}
+
+h1 { font-size: 3.5rem;  font-weight: 700; }
+h2 { font-size: 2.5rem;  font-weight: 600; margin-bottom: 0.8rem; }
+h3 { font-size: 1.35rem; font-weight: 600; margin-bottom: 0.4rem; }
+
+p {
+  color: #4a4540;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #b8860b;
+  text-decoration: none;
+  transition: color 0.22s ease;
+}
+
+/* Pseudo-class: :hover on links */
+a:hover {
+  color: #d4a017;
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+ul { list-style: none; }
+
+
+/* ============================================================
+   3. LAYOUT HELPERS
+   ============================================================ */
+.container {
+  width: 92%;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Makes main content grow so footer always stays at the bottom */
+main { flex: 1; }
+
+.section-gap  { padding: 5rem 0; }
+.text-accent  { color: #b8860b; }
+.text-center  { text-align: center; }
+
+
+/* ============================================================
+   4. SKIP LINK — lets keyboard users jump past the navigation
+   ============================================================ */
+.skip-link {
+  position: absolute;
+  top: -120px;
+  left: 1rem;
+  background-color: #b8860b;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 700;
+  z-index: 9999;
+  transition: top 0.2s;
+}
+
+/* Pseudo-class: :focus — shows the link when keyboard-tabbed to */
+.skip-link:focus { top: 1rem; }
+
+
+/* ============================================================
+   5. HEADER & NAVIGATION
+   ============================================================ */
+header {
+  background-color: #0e0d0b;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1rem 0;
+  border-bottom: 2px solid #b8860b;
+}
+
+/* Descendant selector — the inner wrapper inside header */
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ID selector — the PM logo */
+#site-logo {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #b8860b;
+  letter-spacing: 0.06em;
+}
+
+/* ID + descendant selectors — nav links list */
+#main-nav ul {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+#main-nav ul li a {
+  display: inline-block;
+  padding: 0.4rem 1.1rem;
+  color: #d8d0c8;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  transition: color 0.22s ease, border-color 0.22s ease;
+}
+
+/* Pseudo-class: :hover on nav links */
+#main-nav ul li a:hover {
+  color: #d4a017;
+  border-bottom-color: #d4a017;
+  text-decoration: none;
+}
+
+/* Pseudo-class: :focus — visible outline for keyboard users */
+#main-nav ul li a:focus {
+  outline: 2px solid #b8860b;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Class selector — highlights the current active page in the nav */
+.nav-active {
+  color: #b8860b !important;
+  border-bottom-color: #b8860b !important;
+}
+
+
+/* ============================================================
+   6. BUTTONS
+   ============================================================ */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-family: var(--bs-font-sans-serif);
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: background-color 0.22s ease, color 0.22s ease, transform 0.22s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+  text-decoration: none;
+}
+
+/* Gold filled button */
+.btn-primary {
+  background-color: #b8860b;
+  color: #ffffff;
+  border-color: #b8860b;
+  margin-right: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn-primary:hover {
+  background-color: #d4a017;
+  border-color: #d4a017;
+  color: #ffffff;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* Transparent outline button (used on dark hero background) */
+.btn-ghost {
+  background-color: transparent;
+  color: #f5f0e8;
+  border-color: #d8d0c8;
+}
+
+.btn-ghost:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Black filled button */
+.btn-dark {
+  background-color: #0e0d0b;
+  color: #ffffff;
+  border-color: #0e0d0b;
+  margin-top: 0.5rem;
+}
+
+.btn-dark:hover {
+  background-color: #2a2926;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* Makes a button stretch full width */
+.btn-full { width: 100%; text-align: center; }
+
+
+/* ============================================================
+   7. HERO SECTION (index.html home page)
+   ============================================================ */
+.hero {
+  background-color: #0e0d0b;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 0;
+}
+
+/* Decorative gold vertical lines in the background */
+.hero-bg-lines {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 79px,
+    rgba(184, 134, 11, 0.06) 80px
+  );
+  pointer-events: none;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.hero-text { max-width: 540px; }
+
+.hero-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #b8860b;
+  margin-bottom: 1.2rem;
+}
+
+/* Hero h1 is light coloured because background is dark */
+.hero h1 {
+  color: #f5f0e8;
+  margin-bottom: 1.5rem;
+}
+
+.hero-sub {
+  color: #a09890;
+  font-size: 1.05rem;
+  max-width: 440px;
+  margin-bottom: 2rem;
+}
+
+.hero-btns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Descendant selector — the figure (photo wrapper) inside .hero */
+.hero .hero-photo-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.hero-photo {
+  width: 340px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #b8860b;
+  filter: grayscale(10%) contrast(1.05);
+}
+
+
+/* ============================================================
+   8. INTRO & PROJECTS CTA SECTIONS (index.html)
+   ============================================================ */
+.intro {
+  border-bottom: 1px solid #e2ddd6;
+}
+
+.intro p {
+  max-width: 680px;
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+/* Bold text inside intro stays dark so it stands out */
+.intro strong {
+  color: #0e0d0b;
+  font-weight: 600;
+}
+
+.projects-cta {
+  background-color: #ffffff;
+  border-top: 1px solid #e2ddd6;
+  border-bottom: 1px solid #e2ddd6;
+  text-align: center;
+}
+
+.cta-sub {
+  max-width: 520px;
+  margin: 0 auto 2rem;
+  font-size: 1.05rem;
+}
+
+
+/* ============================================================
+   9. PAGE BANNER (top of about, projects, contact pages)
+   ============================================================ */
+.page-banner {
+  background-color: #0e0d0b;
+  padding: 4rem 0 3rem;
+  text-align: center;
+  border-bottom: 2px solid #b8860b;
+}
+
+/* Light heading because background is dark */
+.page-banner h1 {
+  color: #f5f0e8;
+  font-size: 3.5rem;
+}
+
+.page-banner p {
+  color: #a09890;
+  max-width: 520px;
+  margin: 0.8rem auto 0;
+}
+
+
+/* ============================================================
+   10. ABOUT PAGE LAYOUT
+   ============================================================ */
+.about-grid {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* The text/table side stretches to fill available space */
+.about-grid > section {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-figure {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.about-photo {
+  width: 280px;
+  border-radius: 12px;
+  border: 3px solid #b8860b;
+  box-shadow: 0 4px 24px rgba(14, 13, 11, 0.09);
+  margin-bottom: 0.5rem;
+}
+
+.about-figure figcaption {
+  color: #4a4540;
+  font-size: 0.88rem;
+}
+
+
+/* ============================================================
+   11. DATA TABLE (skills table on about.html)
+   Styled with borders, spacing, and alternating row colours.
+   ============================================================ */
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0 2rem;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 24px rgba(14, 13, 11, 0.09);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Descendant selector — the header row of the table */
+.skills-table thead {
+  background-color: #0e0d0b;
+  color: #f5f0e8;
+}
+
+.skills-table thead th {
+  padding: 1rem 1.3rem;
+  text-align: left;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  border: 1px solid #2a2926;
+}
+
+.skills-table tbody tr {
+  border-bottom: 1px solid #e2ddd6;
+  transition: background-color 0.22s ease;
+}
+
+/* Pseudo-class: :nth-child — gives every second row a slightly different background */
+.skills-table tbody tr:nth-child(even) {
+  background-color: #f5f1eb;
+}
+
+/* Pseudo-class: :hover — highlights a row when mouse hovers over it */
+.skills-table tbody tr:hover {
+  background-color: #ede8df;
+}
+
+.skills-table td {
+  padding: 0.85rem 1.3rem;
+  color: #0e0d0b;
+  border: 1px solid #e2ddd6;
+}
+
+
+/* ============================================================
+   12. CERTIFICATIONS SECTION (about.html)
+   ============================================================ */
+.certs-section {
+  background-color: #ffffff;
+}
+
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+/* Class selector — each certificate card */
+.cert-card {
+  background-color: #f7f4ef;
+  border: 1px solid #e2ddd6;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(14, 13, 11, 0.09);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+/* Pseudo-class: :hover — card lifts up slightly on hover */
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(14, 13, 11, 0.13);
+}
+
+.cert-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 0;
+  border-bottom: 2px solid #b8860b;
+}
+
+/* Descendant selector — issuer text inside a cert-card */
+.cert-card .cert-issuer {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #b8860b;
+  padding: 0.8rem 1rem 0.2rem;
+  margin: 0;
+}
+
+/* Descendant selector — cert name inside a cert-card */
+.cert-card .cert-name {
+  display: block;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0e0d0b;
+  padding: 0 1rem 1rem;
+  margin: 0;
+}
+
+
+/* ============================================================
+   13. PROJECTS PAGE
+   ============================================================ */
+.projects-full-grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Class selector — each project card */
+.project-card {
+  background-color: #ffffff;
+  border: 1px solid #e2ddd6;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(14, 13, 11, 0.09);
+  transition: box-shadow 0.22s ease, transform 0.22s ease;
+}
+
+/* Pseudo-class: :hover — card lifts on hover */
+.project-card:hover {
+  box-shadow: 0 12px 40px rgba(14, 13, 11, 0.15);
+  transform: translateY(-4px);
+}
+
+.project-img-wrap {
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Descendant + pseudo-class — image zooms slightly when card is hovered */
+.project-card:hover .project-img-wrap img {
+  transform: scale(1.04);
+}
+
+.project-img-wrap img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 0;
+  transition: transform 0.4s ease;
+}
+
+.project-info {
+  padding: 1.4rem 1.6rem 1.6rem;
+}
+
+/* Descendant selector — the small tag badge inside project-info */
+.project-info .project-tag {
+  display: inline-block;
+  background-color: #f0ebe2;
+  color: #b8860b;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.7rem;
+  border-radius: 20px;
+  margin-bottom: 0.7rem;
+  border: 1px solid #e2ddd6;
+}
+
+
+/* ============================================================
+   14. CONTACT FORM
+   ============================================================ */
+.form-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #e2ddd6;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 24px rgba(14, 13, 11, 0.09);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Descendant selector — labels inside form groups */
+.form-group label {
+  display: block;
+  font-weight: 500;
+  color: #0e0d0b;
+  margin-bottom: 0.45rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background-color: #f7f4ef;
+  color: #0e0d0b;
+  border: 1.5px solid #e2ddd6;
+  border-radius: 4px;
+  font-family: var(--bs-font-sans-serif);
+  font-size: 0.97rem;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+/* Pseudo-class: :focus — gold glow when user clicks into a field */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #b8860b;
+  box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.18);
+  outline: none;
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+fieldset.form-group {
+  border: 1.5px solid #e2ddd6;
+  border-radius: 4px;
+  padding: 1rem 1.2rem;
+}
+
+fieldset.form-group legend {
+  font-weight: 500;
+  color: #0e0d0b;
+  font-size: 0.9rem;
+  padding: 0 0.4rem;
+  letter-spacing: 0.03em;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.radio-group input,
+.checkbox-group input {
+  accent-color: #b8860b;
+}
+
+.checkbox-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+/* Red asterisk on required fields */
+.required-mark {
+  color: #c0392b;
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   15. FOOTER
+   Centred text — the starter had it left-aligned which was wrong.
+   ============================================================ */
+footer {
+  background-color: #0e0d0b;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  border-top: 2px solid #b8860b;
+  margin-top: auto;
+}
+
+footer p {
+  color: #a09890;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+footer a       { color: #b8860b; }
+footer a:hover { color: #d4a017; }
+
+.footer-logo {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2rem;
+  color: #b8860b;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+
+/* ============================================================
+   16. RESPONSIVE — makes the site work on smaller screens
+   ============================================================ */
+@media (max-width: 860px) {
+  h1 { font-size: 2.4rem; }
+
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-photo-wrap { order: -1; margin: 0 auto; }
+  .hero-sub        { margin-left: auto; margin-right: auto; }
+  .hero-btns       { justify-content: center; }
+
+  .about-grid  { flex-direction: column; }
+  .about-photo { max-width: 240px; margin: 0 auto; }
+}
+
+@media (max-width: 520px) {
+  .form-wrap { padding: 1.5rem; }
+}
