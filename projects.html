@@ -1,30 +1,150 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Projects</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projects by Phatsimo Bakang Maseng">
+  <title>Projects | Phatsimo Maseng</title>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="header">
-        <h1>My Projects</h1>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header>
+    <div class="container">
+      <p id="site-logo" > 
+          <img
+            src="images/logo.jpg" alt="logo image" width='100px' height='100px'
+            style="display: block; margin: 0 auto;"
+          >
+      </p>
+      <nav id="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    
-    <div>
-        <h2>Project 1</h2>
-        <img src="images/project1.jpg">
-        <p>A responsive website built with HTML and CSS.</p>
-    </div>
-    
-    <div>
-        <h2>Project 2</h2>
-        <img src="images/project2.jpg">
-        <p>An e-commerce site with modern design.</p>
-    </div>
-    
-    <!-- Third project missing -->
-    
-    <div class="footer">
-        <p>Contact me at email@example.com</p>
-    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="page-banner" aria-labelledby="page-title">
+      <h1 id="page-title" >My Projects</h1>
+      <p>Websites and applications I designed and built from scratch.</p>
+    </section>
+
+    <section class="section-gap" aria-labelledby="projects-heading">
+      <article class="container">
+        <h2 id="projects-heading" style='text-align:center;'>All Projects</h2>
+
+        <ul class="projects-full-grid" aria-label="List of web development projects">
+
+          <li class="project-card">
+            <figure class="project-img-wrap">
+              <img
+                src="images/SalonWeb.png"
+                alt="Hair Day salon website "
+                width="560"
+                height="340"
+              >
+            </figure>
+            <section class="project-info" aria-label="Hair Day Salon project details">
+              <p class="project-tag">HTML &amp; CSS</p>
+              <h3>Hair Day Salon</h3>
+              <p>
+                A complete salon website featuring a striking typographic HD logo, a soft pink colour palette,
+                and a responsive three-column services Cut &amp; Style, Beauty, and Tutorials.
+                Includes a Salon Special promotional banner advertising up to 50% off. Built using semantic HTML
+                and custom CSS with careful attention to visual hierarchy.
+              </p>
+            </section>
+          </li>
+
+          <li class="project-card">
+            <figure class="project-img-wrap">
+              <img
+                src="images/ZooWeb.png"
+                alt="Pine City Zoo website "
+                width="560"
+                height="340"
+              >
+            </figure>
+            <section class="project-info" aria-label="Pine City Zoo project details">
+              <p class="project-tag">HTML &amp; CSS</p>
+              <h3>Pine City Zoo</h3>
+              <p>
+                An informational website for Pine City Zoo featuring an animal directory with thumbnail
+                photos and descriptions for four animals: Elephant, Giraffe, Koala, and Monkey.
+                The warm wood-texture header and bold orange branding give it a memorable identity.
+                Navigation links to Animals, Map, and Places sections.
+              </p>
+            </section>
+          </li>
+
+          <li class="project-card">
+            <figure class="project-img-wrap">
+              <img
+                src="images/CalcWeb.png"
+                alt="Scientific calculator app with a pink body, number pad, orange AC and DEL buttons, white operator buttons, and scientific function buttons for sin, cos, tan, log, square root, and exponents"
+                width="400"
+                height="480"
+              >
+            </figure>
+            <section class="project-info" aria-label="Scientific Calculator project details">
+              <p class="project-tag">HTML, CSS &amp; JavaScript</p>
+              <h3>Scientific Calculator</h3>
+              <p>
+                A fully functional scientific calculator supporting standard arithmetic plus sin, cos, tan,
+                logarithms, natural exponents, power operations, square root, factorial, pi, percentage,
+                and parentheses. Features a vibrant pink design with a dual-line display showing
+                current input and running result simultaneously.
+              </p>
+            </section>
+          </li>
+
+          <li class="project-card">
+            <figure class="project-img-wrap">
+              <img
+                src="images/DeptWeb.png"
+                alt="South African National Treasury website"
+                width="560"
+                height="340"
+              >
+            </figure>
+            <section class="project-info" aria-label="National Treasury project details">
+              <p class="project-tag">HTML &amp; CSS</p>
+              <h3>National Treasury Department Page</h3>
+              <p>
+                An informational page modelled on South Africa's National Treasury website,
+                profiling the Minister of Finance Enoch Godongwana and deputy ministers
+                Dr David Masondo and Ashor Nick Sarupen, each with a photo, education background,
+                official role, and political context. Built with semantic HTML and structured CSS.
+              </p>
+            </section>
+          </li>
+
+        </ul>
+      </article>
+    </section>
+
+  </main>
+
+
+  <footer>
+    <p class="footer-logo"> 
+
+          <img
+            src="images/logo.jpg" alt="logo image" width='100px' height='100px' style="display: block; margin: 0 auto;"
+          >
+    </p>
+    <p>&copy; 2026 Phatsimo Bakang Maseng. All rights reserved.</p>
+    <p><a href="mailto:email@example.com">email@example.com</a></p>
+  </footer>
+
 </body>
 </html>
