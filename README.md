@@ -155,8 +155,8 @@ Selector types used: element (`body`, `h1`, `table`), class (`.project-card`, `.
 
 ## 9. Reflection
 
-The most challenging part was the CSS. The starter file had placeholder comments marked as errors, but many underlying declarations were structurally valid — the real problem was no selector variety, no pseudo-classes, no box model, and no layout system. Rebuilding around CSS custom properties made everything consistent and easy to scale.
+The most challenging part was the CSS. The starter file had placeholder comments marked as errors, but many underlying declarations were structurally valid - the real problem was no selector variety, no pseudo-classes, no box model, and no layout system. Rebuilding around CSS custom properties made everything consistent and easy to scale.
 
-On the HTML side, replacing generic `div` containers with semantic elements required careful attention to document structure and heading hierarchy. The accessibility work — skip links, ARIA attributes, focus styles, form labels — was the most rewarding, because it makes the site genuinely usable for everyone, not just mouse users.
+On the HTML side, replacing generic `div` containers with semantic elements required careful attention to document structure and heading hierarchy. The accessibility work - skip links, ARIA attributes, focus styles, form labels - was the most rewarding, because it makes the site genuinely usable for everyone, not just mouse users.
 
 I also added a certifications section, a professional hero design with a photo, and Bootstrap as a utility reset, which were improvements beyond the starter requirements. These are documented here so the assessor can see they were intentional additions, not accidental inclusions.
