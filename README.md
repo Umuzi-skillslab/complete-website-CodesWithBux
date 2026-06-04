@@ -1,7 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/YDjuDFNG)
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=23198434&assignment_repo_type=AssignmentRepo)
 
-# Portfolio Website — Phatsimo Bakang Maseng
+# Portfolio Website
 
 A fully functional, accessible, and professionally styled multi-page portfolio website built with HTML and CSS. The project began from a buggy starter codebase (~70% complete with 41 intentional errors) and was debugged, completed, and enhanced to meet all capstone requirements.
 
@@ -17,21 +17,21 @@ This portfolio showcases my background as a front-end developer, my technical sk
 
 ### HTML Issues (25 errors identified and fixed)
 
-- All pages missing `lang="en"` on the `<html>` element — screen readers cannot detect page language
-- All pages missing `<meta charset="UTF-8">` — character encoding was undefined
-- All pages missing `<meta name="viewport">` — mobile layout was broken
+- All pages missing `lang="en"` on the `<html>` element - screen readers cannot detect page language
+- All pages missing `<meta charset="UTF-8">` -character encoding was undefined
+- All pages missing `<meta name="viewport">` - mobile layout was broken
 - `<div class="header">` used instead of semantic `<header>` on all pages
 - `<div class="footer">` used instead of semantic `<footer>` on all pages
-- No `<main>` element on any page — missing ARIA landmark region for screen readers
+- No `<main>` element on any page - missing ARIA landmark region for screen readers
 - Navigation entirely missing on `index.html`
-- No `<nav>` element on any page — navigation not semantically marked
+- No `<nav>` element on any page - navigation not semantically marked
 - Content sections used `<div>` instead of `<section>` throughout
 - Project blocks used `<div>` instead of semantic `<article>`
 - About page: no `<table>` existed at all
 - Table missing `<thead>`, `<tbody>`, `<th scope>`, and `<caption>`
 - All `<img>` tags missing `alt` attributes
 - Contact form had no `<label>` elements for any input
-- Form only had text and textarea inputs — needed 5+ input types
+- Form only had text and textarea inputs - needed 5+ input types
 - No HTML validation attributes (`required`, `minlength`, `pattern`) anywhere
 - Grouped inputs lacked `<fieldset>` and `<legend>`
 - No `aria-label`, `aria-current`, or `aria-required` on any element
@@ -41,17 +41,17 @@ This portfolio showcases my background as a front-end developer, my technical sk
 
 ### CSS Issues (16 errors identified and fixed)
 
-- Only 2–3 selector types used — needed 5+
+- Only 2–3 selector types used - needed 5+
 - No pseudo-classes (`:hover`, `:focus`, `:nth-child`) used anywhere
 - No descendant selectors (e.g. `nav ul li a`)
 - No ID selectors
 - No pseudo-elements (`::before`, `::after`)
 - Navigation styling completely absent
 - Table styling completely absent
-- Form styling incomplete — only `display:block` on inputs
+- Form styling incomplete - only `display:block` on inputs
 - No box model demonstration (margin, padding, border)
 - Font declared as `Arial` with no proper fallback stack
-- No `:focus` styles — keyboard navigation inaccessible
+- No `:focus` styles - keyboard navigation inaccessible
 - No hover transitions on interactive elements
 - Inconsistent formatting and no logical organisation in the CSS file
 
@@ -96,7 +96,7 @@ Selector types used: element (`body`, `h1`, `table`), class (`.project-card`, `.
 
 1. Download or clone the repository to your computer.
 2. Open the project folder in File Explorer (Windows) or Finder (Mac).
-3. Double-click `index.html` — it will open in your default browser.
+3. Double-click `index.html` - it will open in your default browser.
 4. Use the navigation menu to move between pages. All links are relative so they work without a server.
 
 ---
