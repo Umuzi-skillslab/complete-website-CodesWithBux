@@ -1,30 +1,211 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>About</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Phatsimo Bakang Maseng ">
+  <title>About | Phatsimo Maseng</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="header">
-        <h1>About Me</h1>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header>
+    <div class="container">
+      <p id="site-logo" > 
+          <img
+            src="images/logo.jpg" alt="logo image" width='100px' height='100px'
+            style="display: block; margin: 0 auto;"
+          >
+      </p>
+      <nav id="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="nav-active" aria-current="page">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    
-    <div>
-        <h2>My Background</h2>
-        <p>I have been working in web development for several years.</p>
-        
-        <h3>Skills</h3>
-        <!-- Table should be here but is missing -->
-        <p>HTML, CSS, JavaScript</p>
-    </div>
-    
-    <div>
-        <h3>My Photo</h3>
-        <img src="images/profile.jpg">
-    </div>
-    
-    <div class="footer">
-        <p>Contact me at email@example.com</p>
-    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="page-banner" aria-labelledby="page-title">
+      <h1 id="page-title">About Me</h1>
+      <p>My background, technical skills, and certifications.</p>
+    </section>
+
+    <section class="section-gap" aria-labelledby="bio-heading">
+      <article class="container about-grid">
+
+        <section aria-labelledby="skills-heading">
+          <h2 id="bio-heading">My Background</h2>
+          <p>
+            I am Phatsimo Bakang Maseng, a dedicated front-end developer based in, South Africa.
+            I completed the <strong>FNB App Academy Full Stack Development</strong> programme in 2025,
+            covering app strategy, UI/UX principles, HTML, CSS, JavaScript, APIs.
+            Since then I have continued growing through the
+            <strong>Meta Front-End Developer Professional Certificate</strong> on Coursera, completing
+            four courses in HTML, CSS, JavaScript, and Version Control.
+          </p>
+          <p>
+            I thrive when solving problems creatively, whether designing a salon website, building a
+            scientific calculator, or creating an informative government department page. I write clean,
+            standards-compliant, accessible code.
+          </p>
+
+          <h3 id="skills-heading">Technical Skills &amp; Proficiency</h3>
+          <table class="skills-table" aria-label="Technical skills and proficiency levels">
+            <thead>
+              <tr>
+                <th scope="col">Skill</th>
+                <th scope="col">Category</th>
+                <th scope="col">Proficiency</th>
+                <th scope="col">Experience</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>HTML</td>
+                <td>Markup</td>
+                <td>Intermediate</td>
+                <td>2+ years</td>
+              </tr>
+              <tr>
+                <td>CSS / Flexbox / Grid</td>
+                <td>Styling</td>
+                <td>Intermediate</td>
+                <td>1+ years</td>
+              </tr>
+              <tr>
+                <td>JavaScript</td>
+                <td>Programming</td>
+                <td>Beginner</td>
+                <td>1+ year</td>
+              </tr>
+              <tr>
+                <td>Responsive </td>
+                <td>Design</td>
+                <td>Intermediate</td>
+                <td>1+ years</td>
+              </tr>
+              <tr>
+                <td>Git &amp; GitHub</td>
+                <td>Version Control</td>
+                <td>Intermediate</td>
+                <td>1+ year</td>
+              </tr>
+              <tr>
+                <td>Accessibility</td>
+                <td>Standards</td>
+                <td>Intermediate</td>
+                <td>1 year</td>
+              </tr>
+              <tr>
+                <td>UI/UX Design Principles</td>
+                <td>Design</td>
+                <td>Intermediate</td>
+                <td>1+ year</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <figure class="about-figure">
+          <img
+            src="images/Confident professional portrait.png"
+            alt="Professional headshot of Phatsimo Bakang Maseng"
+            class="about-photo"
+            width="300"
+            height="380"
+          >
+          <figcaption>Phatsimo Bakang Maseng &mdash; Front-End Developer, South Africa</figcaption>
+        </figure>
+
+      </article>
+    </section>
+
+    <section id="certifications" class="section-gap certs-section" aria-labelledby="certs-heading">
+      <article class="container">
+        <h2 id="certs-heading">My Certifications</h2>
+
+        <ul class="certs-grid" aria-label="List of earned certificates">
+
+          <li class="cert-card">
+            <img
+              src="images/certificate1.jpg"
+              alt="Coursera certificate Introduction to Front-End Development"
+              width="400"
+              height="280"
+            >
+            <p class="cert-issuer">Meta via Coursera &middot; Feb 2026</p>
+            <p class="cert-name">Introduction to Front-End Development</p>
+          </li>
+
+          <li class="cert-card">
+            <img
+              src="images/certificate2.jpg"
+              alt="Coursera certificate  JavaScript"
+              width="400"
+              height="280"
+            >
+            <p class="cert-issuer">Meta via Coursera &middot; Mar 2026</p>
+            <p class="cert-name">Programming with JavaScript</p>
+          </li>
+
+          <li class="cert-card">
+            <img
+              src="images/certificate3.jpg"
+              alt="Coursera certificate Version Control"
+              width="400"
+              height="280"
+            >
+            <p class="cert-issuer">Meta via Coursera &middot; Mar 2026</p>
+            <p class="cert-name">Version Control</p>
+          </li>
+
+          <li class="cert-card">
+            <img
+              src="images/certificate4.jpg"
+              alt="Coursera certificate HTML and CSS in Depth"
+              width="400"
+              height="280"
+            >
+            <p class="cert-issuer">Meta via Coursera &middot; Mar 2026</p>
+            <p class="cert-name">HTML and CSS in Depth</p>
+          </li>
+
+          <li class="cert-card">
+            <img
+              src="images/FND-Academy-certificate.jpg"
+              alt="FNB App Academy 2025 certificate in Full Stack Development"
+              width="400"
+              height="280"
+            >
+            <p class="cert-issuer">FNB App Academy &middot; Jul 2025</p>
+            <p class="cert-name">Certificate in Full Stack Development</p>
+          </li>
+
+        </ul>
+      </article>
+    </section>
+
+  </main>
+
+
+  <footer>
+    <p class="footer-logo"> 
+
+          <img
+            src="images/logo.jpg" alt="logo image" width='100px' height='100px' style="display: block; margin: 0 auto;"
+          >
+    </p>
+    <p>&copy; 2026 Phatsimo Bakang Maseng. All rights reserved.</p>
+    <p><a href="mailto:email@example.com">email@example.com</a></p>
+  </footer>
+
 </body>
 </html>
